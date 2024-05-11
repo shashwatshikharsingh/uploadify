@@ -29,7 +29,7 @@ function Nav() {
     <div key="1" className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800">
       <Link
         className="flex items-center text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-        href="#"
+        href="/"
       >
         <Image
           alt="Logo"
@@ -52,7 +52,7 @@ function Nav() {
 {isSignedIn ? (
   <>
   <Button asChild className="rounded-full" variant="outline">
-    <Link href="/dashboard">Dashboard</Link>
+    <Link href="/drive">Dashboard</Link>
   </Button>
     <UserButton className="rounded-full text-white bg-[#E95793] hover:bg-white hover:text-[#E95793] selection:bg-white" signInUrl='/register' afterSignOutUrl="/register" />
 </>
