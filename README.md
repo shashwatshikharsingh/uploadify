@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Uploadify README**
 
-## Getting Started
+## **Project Overview**
 
-First, run the development server:
+Uploadify is a cloud-based file storage and management system built using NextJS, TailwindCSS, and AWS services. The project utilizes Clerk Authentication for user authentication and allows users to sign up and login using GitHub, Google, Apple, and Facebook. Users can upload files to AWS S3 and track their total usage of drive quota.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **Features**
+
+- User authentication using Clerk Authentication
+- Support for multiple authentication providers (GitHub, Google, Apple, Facebook)
+- File upload and storage using AWS S3
+- Quota tracking for users
+- Responsive design using TailwindCSS
+
+## **Screenshots**
+
+### File Upload Page
+
+![File Upload Page](screenshots/upload-page.png)
+
+### Your Drive Page
+
+![Your Drive](screenshots/your-drive.png)
+
+### Sign Up Page
+
+![Sign Up Page](screenshots/sign-up.png)
+
+## **How to Deploy Guide**
+
+### Prerequisites
+
+- AWS account with S3 bucket created
+- Clerk Authentication account with API key and secret
+- Vercel account with project created
+
+### Deployment Steps
+
+1. Clone the repository: `git clone https://github.com/your-username/uploadify.git`
+2. Install dependencies: `npm install`
+3. Create a new file named `.env` with the following content:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+CLERK_SECRET_KEY=your-clerk-secret-key
+AWS_ACCESS_KEY_ID=your-aws-access-key-id
+AWS_SECRET_ACCESS_KEY=your-aws-secret-access-key
+AWS_REGION=your-aws-region
+AWS_BUCKET_NAME=your-aws-bucket-name
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=your-clerk-sign-in-url
+NEXT_PUBLIC_CLERK_SIGN_OUT_URL=your-clerk-sign-out-url
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=your-clerk-after-sign-in-url
+NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL=your-clerk-after-sign-out-url
+MONGODB_URI=your-mongodb-uri
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Update the `next.config.js` file with your Vercel project ID and API token:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```js
+module.exports = {
+  //...
+  vercel: {
+    projectId: "your-vercel-project-id",
+    apiToken: "your-vercel-api-token",
+  },
+};
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. Deploy the application to Vercel: `npm run deploy`
 
-## Learn More
+## **Instructions on Contributing**
 
-To learn more about Next.js, take a look at the following resources:
+### Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Fork the repository: `git fork https://github.com/your-username/uploadify.git`
+- Create a new branch for your feature or bug fix: `git checkout -b my-feature`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Making Changes
 
-## Deploy on Vercel
+- Make your changes to the codebase
+- Commit your changes with a descriptive commit message: `git commit -m "Added new feature"`
+- Push your changes to your forked repository: `git push origin my-feature`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Creating a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Create a pull request to merge your changes into the main branch
+- Ensure that your changes are thoroughly tested and reviewed by the project maintainers
+
+## **Licence**
+
+Uploadify is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## **Contact**
+
+If you have any questions or issues with the project, please don't hesitate to reach out to the project maintainers at [shashwatshikharsingh](github.com/shashwatshikharsingh).
