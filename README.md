@@ -36,7 +36,7 @@ Uploadify is a cloud-based file storage and management system built using NextJS
 
 ### Deployment Steps
 
-1. Clone the repository: `git clone https://github.com/your-username/uploadify.git`
+1. Clone the repository: `git clone https://github.com/shashwatshikharsingh/uploadify.git`
 2. Install dependencies: `npm install`
 3. Create a new file named `.env` with the following content:
 
@@ -72,7 +72,7 @@ module.exports = {
 
 ### Getting Started
 
-- Fork the repository: `git fork https://github.com/your-username/uploadify.git`
+- Fork the repository: `git fork https://github.com/shashwatshikharsingh/uploadify.git`
 - Create a new branch for your feature or bug fix: `git checkout -b my-feature`
 
 ### Making Changes
